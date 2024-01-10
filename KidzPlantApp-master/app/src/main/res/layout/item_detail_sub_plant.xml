@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="-10dp"
+    android:background="@drawable/bg_card_cream">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/sunflower_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_icon_plant"
+        android:padding="10dp"
+        android:src="@drawable/green_onion"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleSubPlant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintEnd_toStartOf="@+id/icSpeaker"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
+        tools:text="Bunga Matahari" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icSpeaker"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_speaker"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitleSubPlant"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleSubPlant" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBenefit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Manfaat"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvListBenefit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/icSpeaker"
+        app:layout_constraintStart_toStartOf="@+id/tvBenefit"
+        app:layout_constraintTop_toBottomOf="@+id/tvBenefit"
+        tools:text="1. Lorem ipsum dolor sit amet consectetur.\n2. Varius tincidunt quisque est tortor semper lectus blandit nibh.\n3. Leo egestas aliquet in pellentesque faucibus." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

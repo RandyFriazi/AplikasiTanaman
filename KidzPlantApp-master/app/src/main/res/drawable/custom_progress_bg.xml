@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item android:id="@+id/background">-->
+<!--        <scale android:scaleWidth="75%">-->
+<!--            <inset android:drawable="@drawable/bg_progress"/>-->
+<!--        </scale>-->
+<!--    </item>-->
+    <item android:id="@+id/progress">
+        <scale android:scaleWidth="100%" >
+            <bitmap android:gravity="start" android:src="@drawable/progress" />
+<!--            <inset android:drawable="@drawable/progres" />-->
+        </scale>
+
+    </item>
+</layer-list>

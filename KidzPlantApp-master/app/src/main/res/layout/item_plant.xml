@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/bg_item_plant_large"
+    android:padding="24dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icPlant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/green_onion" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icPlant"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tanaman Umbi-umbian" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:justificationMode="inter_word"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:targetApi="o"
+        tools:text="@string/lorem_ipsum" />
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvHighScore"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/tvRestAttempt"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvTitle"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTitle"-->
+<!--        tools:text="Nilai Terbaik: 80" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvRestAttempt"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat_medium"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btnLearn"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btnLearn"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvHighScore"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btnLearn"-->
+<!--        tools:text="Sisa Percobaan: 1" />-->
+
+<!--    <androidx.percentlayout.widget.PercentRelativeLayout-->
+<!--        android:id="@+id/layProgress"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:paddingEnd="2dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvTitle"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvTitle"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTitle">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/appCompatImageView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="18dp"-->
+<!--            android:paddingVertical="4dp"-->
+<!--            android:src="@drawable/bg_progress"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/icPlant"-->
+<!--            tools:layout_editor_absoluteX="24dp" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/progress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scaleType="matrix"-->
+<!--            android:src="@drawable/progress" />-->
+
+<!--    </androidx.percentlayout.widget.PercentRelativeLayout>-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvGreats"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:text="Hebat!"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/tvTextFirst"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvTitle"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvTextFirst"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat_regular"-->
+<!--        android:text="@string/proses"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btnLearn"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvDesc"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btnLearn" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tvTextInput"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btnLearn"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvTextFirst"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btnLearn"-->
+<!--        tools:text="25%" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLearn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_pink"
+        android:textColor="@color/text_color_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingHorizontal="24dp"
+        android:text="Belajar"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvDesc"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

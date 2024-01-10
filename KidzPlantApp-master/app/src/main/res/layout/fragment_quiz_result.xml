@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.quiz.QuizResultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="28dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_card_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:id="@+id/tvJumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Jumlah"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/tvBenar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvBenar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Benar"
+            android:textColor="#80CD58"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/tvSalah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJumlah" />
+
+        <TextView
+            android:id="@+id/tvJumlahBenar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="1"
+            android:textColor="#80CD58"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvBenar"
+            app:layout_constraintStart_toStartOf="@+id/tvBenar"
+            app:layout_constraintTop_toBottomOf="@+id/tvBenar" />
+
+        <TextView
+            android:id="@+id/tvSalah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Salah"
+            android:textColor="#CC1313"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBenar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvBenar"
+            app:layout_constraintTop_toTopOf="@+id/tvBenar" />
+
+        <TextView
+            android:id="@+id/tvJumlahSalah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            tools:text="1"
+            android:textColor="#CC1313"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSalah"
+            app:layout_constraintStart_toStartOf="@+id/tvSalah"
+            app:layout_constraintTop_toBottomOf="@+id/tvSalah" />
+
+        <TextView
+            android:id="@+id/tvRestAttempt"
+            android:layout_marginTop="26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            tools:text="Sisa Percobaan: 0"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJumlahBenar"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_btn_pink"
+            android:fontFamily="@font/montserrat_semibold"
+            android:paddingHorizontal="33dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/text_color_button"
+            android:text="Oke!"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRestAttempt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="36dp"
+            android:textColor="@color/text_color_button"
+            android:visibility="gone"
+            android:background="@drawable/bg_card_white"
+            android:fontFamily="@font/montserrat_semibold"
+            android:paddingHorizontal="33dp"
+            android:text="Ulangi"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnOK" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/popup_score"
+        app:layout_constraintBottom_toTopOf="@+id/layBody"
+        app:layout_constraintEnd_toEndOf="@+id/layBody"
+        app:layout_constraintStart_toStartOf="@+id/layBody"
+        app:layout_constraintTop_toTopOf="@+id/layBody">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintBottom_toTopOf="@id/tvScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+            tools:text="80" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
