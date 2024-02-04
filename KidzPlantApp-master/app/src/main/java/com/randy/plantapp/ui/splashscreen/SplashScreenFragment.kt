@@ -36,11 +36,7 @@ class SplashScreenFragment : Fragment() {
                     val action = if (stateLogin) {
                         SplashScreenFragmentDirections.actionSplashScreenFragmentToHomeFragment()
                     } else {
-                        if (stateOnBoard) {
-                            SplashScreenFragmentDirections.actionSplashScreenFragmentToLoginFragment()
-                        } else {
-                            SplashScreenFragmentDirections.actionSplashScreenFragmentToOnBoardingFragment()
-                        }
+                        SplashScreenFragmentDirections.actionSplashScreenFragmentToOnBoardingFragment()
                     }
                     findNavController().navigate(action)
                 }

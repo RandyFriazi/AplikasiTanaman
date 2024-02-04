@@ -47,18 +47,6 @@ class UserPreferences @Inject constructor(@ApplicationContext val context: Conte
         }
     }
 
-//    fun getOnBoardState(): Flow<Boolean> {
-//        return dataStore.data.map { preferences ->
-//            preferences[ON_BOARD_STATE] ?: false
-//        }
-//    }
-
-    suspend fun saveOnBoardState(onBoardState: Boolean) {
-        dataStore.edit { preferences ->
-            preferences[ON_BOARD_STATE] = onBoardState
-        }
-    }
-
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences[LOGIN_KEY] = false
@@ -70,7 +58,7 @@ class UserPreferences @Inject constructor(@ApplicationContext val context: Conte
         private val USER_ID_KEY = intPreferencesKey("user_id")
         private val LOGIN_KEY = booleanPreferencesKey("state")
         private val QUIZ_STATE = booleanPreferencesKey("quiz_state")
-        private val ON_BOARD_STATE = booleanPreferencesKey("on_board_state")
+
     }
 
 }
