@@ -79,6 +79,7 @@ class QuizResultFragment : Fragment() {
                         tvScore.text = (benar * 10).toString()
                         tvJumlahBenar.text = benar.toString()
                         tvJumlahSalah.text = salah.toString()
+
                     }
 
                     Log.i("QUIZRESULT", "onViewCreated: $data")
