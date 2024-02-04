@@ -45,6 +45,11 @@ class LoginFragment : Fragment() {
         viewModel.user.observe(viewLifecycleOwner) { uiState ->
             when (uiState) {
                 is UiState.Error -> {
+                    Toast.makeText(
+                        requireContext(),
+                        "Email atau password salah",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     isLoading(false)
                 }
                 is UiState.Loading -> {
@@ -70,6 +75,12 @@ class LoginFragment : Fragment() {
                                     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
                                 }
                             }
+                    } else {
+                        Toast.makeText(
+                            requireContext(),
+                            "Email atau password salah",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
 
                 }
